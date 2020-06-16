@@ -13,4 +13,13 @@ public class VirtualPetTest {
         assertEquals("Scruffy", virtualPetTest.getName());
     }
 
+    @Test
+    public void hungerShouldBe8WhenCreated(){
+        VirtualPet virtualPetTest = new VirtualPet("Scruffy");
+
+        assertEquals(8, virtualPetTest.getHunger());
+
+
+    }
+
 }
