@@ -32,4 +32,10 @@ public class VirtualPetTest {
         assertEquals(10, virtualPetTest.getThirst());
     }
 
+    @Test
+    public void energyShouldBe5WhenCreated(){
+
+        assertEquals(5, virtualPetTest.getPlay());
+    }
+
 }
