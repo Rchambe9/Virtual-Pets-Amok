@@ -26,5 +26,10 @@ public class VirtualPetTest {
         assertEquals(8, virtualPetTest.getHunger());
 
     }
+    @Test
+    public void waterShouldBe10WhenCreated(){
+
+        assertEquals(10, virtualPetTest.getThirst());
+    }
 
 }
