@@ -38,4 +38,9 @@ public class VirtualPetTest {
         assertEquals(5, virtualPetTest.getPlay());
     }
 
+    @Test
+    public void chargeUpShouldBe3WhenCreated(){
+
+        assertEquals(3, virtualPetTest.getReboot());
+    }
 }

@@ -5,6 +5,7 @@ public class VirtualPet {
     private int hunger = 8;
     private int thirst = 10;
     private int energy = 5;
+    private int chargeUp = 3;
 
     public VirtualPet(String name) {
         this.name   = name;
@@ -21,5 +22,8 @@ public class VirtualPet {
     public int getThirst() { return thirst; }
 
     public int getPlay() {  return energy;  }
-}
+
+    public int getReboot() {  return chargeUp; }
+    }
+
 
