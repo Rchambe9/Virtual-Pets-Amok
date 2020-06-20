@@ -20,29 +20,29 @@
 ### General
 
 - introduce ways to track:
-	- [ ] cage cleanliness for organic dogs
-	- [ ] shelter litter box cleanliness for organic cats
-	- [ ] oil/maintenance level for robot animals
+	- [X] cage cleanliness for organic dogs
+	- [X] shelter litter box cleanliness for organic cats
+	- [X] oil/maintenance level for robot animals
 
 ### All classes
 
-- [ ] Encapsulate all instance variables.
-- [ ] Assign appropriate visibility modifiers to methods only used internally by a class or within a class hierarchy.
+- [X] Encapsulate all instance variables.
+- [X] Assign appropriate visibility modifiers to methods only used internally by a class or within a class hierarchy.
 
 ### VirtualPet class and related subclasses/interfaces
 
 In addition to the last project's requirements:
 
-- [ ] create a model that allows for dogs and cats, either of which may be robotic
-- [ ] introduce an attribute (instance variable) representing overall health that is updated as a result of other attributes moving in a negative or positive direction, influencing happiness
+- [X] create a model that allows for dogs and cats, either of which may be robotic
+- [X] introduce an attribute (instance variable) representing overall health that is updated as a result of other attributes moving in a negative or positive direction, influencing happiness
 - introduce methods that allow for:
-	- [ ] oiling robotic pets
-	- [ ] walking dogs, decreasing the likelihood that organic dogs will soil their cages, while increasing happiness in all dogs
+	- [X] oiling robotic pets
+	- [X] walking dogs, decreasing the likelihood that organic dogs will soil their cages, while increasing happiness in all dogs
 - do not allow:
-	- [ ] feeding/watering robotic pets
-	- [ ] oiling organic pets
-- [ ] modify the `tick` method to return a value indicating the amount of waste a pet creates, which should contribute to either (optionally, create accessor methods to retrieve these values instead):
-	- [ ] amount of waste in an individual dog cage
+	- [X] feeding/watering robotic pets
+	- [X] oiling organic pets
+- [X] modify the `tick` method to return a value indicating the amount of waste a pet creates, which should contribute to either (optionally, create accessor methods to retrieve these values instead):
+	- [X] amount of waste in an individual dog cage
 
 ### VirtualPetShelter class
 
