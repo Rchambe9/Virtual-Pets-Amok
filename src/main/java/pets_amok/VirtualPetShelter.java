@@ -1,17 +1,18 @@
-package virtualpetsamok;
+package pets_amok;
 
 import pets_amok.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class VirtualPetShelter {
+    private Collection<VirtualPet> petShelter = new ArrayList<>();
 
     private int litterBox = 50;
     private int dogCage = 50;
 
-    private Map<String, VirtualPet> petShelter = new HashMap<String, VirtualPet>();
 
     public int getLitterBox() {
         return litterBox;
@@ -25,7 +26,7 @@ public class VirtualPetShelter {
     }
 
     public void maintainAllRobo() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter){
             if (pet instanceof RoboticPets) {
                 ((RoboticPets) pet).oilPet();
                 ((RoboticPets) pet).recharge();
@@ -34,17 +35,17 @@ public class VirtualPetShelter {
     }
 
     public void cleanDogCages() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter) {
             if (pet instanceof OrganicDog) {
                 ((OrganicDog) pet).cleanDogCage();
             }
         }
     }
 
-    public VirtualPet[] pets() {return pets();
-    }
+//    public VirtualPet[] pets() {return pets();
+//    }
     public void walkDogs() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter) {
             if (pet instanceof Dog) {
                 ((Dog) pet).walk();
             }
@@ -53,19 +54,19 @@ public class VirtualPetShelter {
     }
 
     public void intake(VirtualPet pet) {
-        petShelter.put(pet.getPetName(), (VirtualPet) pet);
+        petShelter.add((VirtualPet)pet);
     }
 
     public void intake(RoboticPets pet) {
-        petShelter.put(pet.getPetName(), (VirtualPet) pet);
+        petShelter.add((VirtualPet)pet);
     }
 
     public void intake(OrganicPets pet) {
-        petShelter.put(pet.getPetName(), (VirtualPet) pet);
+        petShelter.add((VirtualPet)pet);
     }
 
     public void feedAllOrganic() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter) {
             if (pet instanceof OrganicPets) {
                 ((OrganicPets) pet).feed();
             }
@@ -75,7 +76,7 @@ public class VirtualPetShelter {
     }
 
     public void waterAllOrganic() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter) {
             if (pet instanceof OrganicPets) {
                 ((OrganicPets) pet).water();
             }
@@ -86,7 +87,7 @@ public class VirtualPetShelter {
 
 
     public void tickAllPets() {
-        for (VirtualPet pet : pets()) {
+        for (VirtualPet pet : petShelter) {
             if (pet instanceof OrganicCat) {
                 litterBox += ((OrganicCat) pet).tick();
             }
@@ -102,11 +103,15 @@ public class VirtualPetShelter {
 
 
     public Collection<VirtualPet> retrieveAllPets() {
-        return petShelter.values();
+        return petShelter;
     }
 
     public VirtualPet getPet(String name) {
-        return petShelter.get(name);
+        for (VirtualPet pet : petShelter) {
+            if (pet.getPetName() == name) {
+                return pet;
+            }
+        }return null;
     }
 
     public void playWithOne(VirtualPet onePet) {

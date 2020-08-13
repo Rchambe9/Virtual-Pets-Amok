@@ -8,7 +8,7 @@ public class OrganicCatTest {
 
 
 
-        virtualpetsamok.VirtualPetShelter petShelter = new virtualpetsamok.VirtualPetShelter();
+        pets_amok.VirtualPetShelter petShelter = new pets_amok.VirtualPetShelter();
         OrganicCat organicCat = new OrganicCat("Whiskers", "Parisian Cat");
 
 
